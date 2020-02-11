@@ -8,7 +8,9 @@ Please read README.md or github.com/physcopatens12/maltorean.
 -------------------------------------------------------------
 
 **REQUIRED LIBRARY:**   
+```
 Pandas & Matplotlib   
+```
 
 **USAGE:**   
 ```
@@ -28,6 +30,7 @@ $ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]
 ```
 
 **INPUT FORMAT:**   
+```
 Reads metadata sheet .csv file into pandas dataframe.   
 File must be constructed with columns (without header and index):   
 >1) *MALDI-TOF result file name (without .csv),   
@@ -36,8 +39,11 @@ File must be constructed with columns (without header and index):
 
 >*MALDI-TOF result .csv file is from Unipeptide sheet of .xlsx file.   
 >Columns are Protein name, Types of peptide (count) and Sum of peptide spectrum.   
+```
 
 **OUTPUT FORMAT:**   
+```
 Writes a .csv sheet of reference protein amino acid and its frequency.   
 Draws bar plot of amino acid frequency indexed by reference protein sequence.   
 Output size is 2000px X 5 px and formats are .pdf and .png.   
+```
