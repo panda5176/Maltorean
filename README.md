@@ -7,6 +7,8 @@ Peptide read counts are converted into bar graph, indexed and aligned with refer
    
 Please read README.md or https://github.com/physcopatens12/maltorean.   
 
+---------------------------------------------------------------------
+
 **REQUIRED LIBRARY:**   
 ```
 Pandas & Matplotlib   
