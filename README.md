@@ -7,7 +7,7 @@ Maltorean is desinged to analyze MALDI-TOF result file from SNU Proteomics Core 
 Counts for each peptide read are aligned with reference protein sequences,
 and converted into amino acid indexed bar graph.   
    
-Please read README.md or [github.com/physcopatens12/maltorean](https://github.com/physcopatens12/maltorean).   
+Please read README.md or [github.com/physcopatens12/maltorean][https://github.com/physcopatens12/maltorean].   
 ```
 
 -------------------------------------------------------------
