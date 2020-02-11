@@ -10,6 +10,7 @@ Please read README.md or github.com/physcopatens12/maltorean.
 
 import pandas
 import matplotlib.pyplot as plt
+from time import time
 
 def ArgsInput():
     '''
@@ -42,7 +43,7 @@ def ReadMeta(_meta_csv):
     '''
     meta_df_ = pandas.read_csv(_meta_csv, header = None)
 
-    print("READ METADATA\n")
+    print("@ READ METADATA\n")
     return meta_df_
 
 
@@ -69,7 +70,7 @@ def ReadPep(_pep_csv, _pep_name):
     pep_df_ = pep_df_raw[pep_df_raw['Protein name']\
     .isin([_pep_name])].reset_index(drop = 'TRUE')
 
-    print("READ CSV: " + _pep_csv)
+    print("@ READ CSV: " + _pep_csv)
     return pep_df_
 
 
@@ -86,7 +87,7 @@ def AlignPep(_ref, _ref_df_, _pep_df):
             for i in range(len(pep)):
                 _ref_df_.loc[ip + i, 'FREQ'] += nump
 
-    print("ALIGNED")
+    print("@ ALIGNED")
     return _ref_df_
 
 
@@ -96,7 +97,7 @@ def WriteAlign(_ref_df, _file_name, _out_path):
     '''
     _ref_df.to_csv(_out_path + _file_name + "_result.csv", index = True)
 
-    print("WROTE: " + _out_path + _file_name + "_result.csv\n")
+    print("@ WROTE: " + _out_path + _file_name + "_result.csv")
     return None
 
 
@@ -113,6 +114,7 @@ def Plotting(_ref_df, _pep_name, _out_path, _file_name):
 
     plt.bar(_ref_df.index, _ref_df['FREQ'], color = 'black')
     plt.xticks(xi_aa, rotation = 45, fontsize = 5)
+    plt.grid()
 
     plt.title(_pep_name + " MALDI-TOF FREQUENCY by Maltorean")
     plt.xlabel(_pep_name)
@@ -121,12 +123,18 @@ def Plotting(_ref_df, _pep_name, _out_path, _file_name):
     plt.savefig(_out_path + _file_name + '_result.pdf')
     plt.savefig(_out_path + _file_name + '_result.png')
 
-    print("PLOTTED: " + _out_path + _file_name + "_result.pdf or .png")
+    print("@ PLOTTED: " + _out_path + _file_name + "_result.pdf or .png\n")
     return None
 
 
 def main():
-    print ("MALDI-TOF RESULT ANALYZER by physcopatens12")
+    print ("\
+    ===================================================\n\
+    @@@ MALDI-TOF RESULT ANALYZER by physcopatens12 @@@\n\
+    ===================================================\n\
+    ")
+    time0 = time()
+
     _args = ArgsInput()
     _meta_df = ReadMeta(_args.meta)
 
@@ -142,6 +150,9 @@ def main():
         _ref_df = AlignPep(_ref, _ref_df, _pep_df)
         WriteAlign(_ref_df, _file_name, _out_path)
         Plotting(_ref_df, _pep_name, _out_path, _file_name)
+
+    time1 = time()
+    print("@ ANALYSIS ENDED: %s seconds" % round(time1 - time0, 2))
 
 
 if __name__ == "__main__":
