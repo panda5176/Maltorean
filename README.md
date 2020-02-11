@@ -11,7 +11,7 @@ Please read README.md or github.com/physcopatens12/maltorean.
 Pandas & Matplotlib   
 
 **USAGE:**   
-$ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]   
+'''$ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]'''   
 
 **OPTIONAL ARGUMENTS:**   
 -h, --help   
@@ -30,8 +30,8 @@ File must be constructed with columns (without header and index):
 >2) Target reference protein name (same in result file),   
 >3) Amino acid sequence of reference protein.   
 
-*MALDI-TOF result .csv file is from Unipeptide sheet of .xlsx file.   
-Columns are Protein name, Types of peptide (count) and Sum of peptide spectrum.   
+>*MALDI-TOF result .csv file is from Unipeptide sheet of .xlsx file.   
+>Columns are Protein name, Types of peptide (count) and Sum of peptide spectrum.   
 
 **OUTPUT FORMAT:**   
 Writes a .csv sheet of reference protein amino acid and its frequency.   
