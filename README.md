@@ -16,14 +16,16 @@ $ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]
 ```   
 
 **OPTIONAL ARGUMENTS:**   
+```
 -h, --help   
->: show this help message and exit   
+: show this help message and exit   
 -M META, --meta META   
->: .csv file including metadata   
+: .csv file including metadata   
 -R READ, --read READ   
->: folder path of read MALDI-TOF .csv files   
+: folder path of read MALDI-TOF .csv files   
 -W WRITE, --write WRITE   
->: folder path to write files   
+: folder path to write files   
+```
 
 **INPUT FORMAT:**   
 Reads metadata sheet .csv file into pandas dataframe.   
