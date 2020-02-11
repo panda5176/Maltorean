@@ -11,7 +11,9 @@ Please read README.md or github.com/physcopatens12/maltorean.
 Pandas & Matplotlib   
 
 **USAGE:**   
-'''$ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]'''   
+'''
+$ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]
+'''   
 
 **OPTIONAL ARGUMENTS:**   
 -h, --help   
