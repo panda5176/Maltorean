@@ -47,6 +47,7 @@ File must be constructed with columns (without header and index):
 **OUTPUT FORMAT:**   
 ```
 Writes a .csv sheet of reference protein amino acid and its frequency.   
+   
 Draws bar plot of amino acid frequency indexed by reference protein sequence.   
 Output size is 2000px X 5 px and formats are .pdf and .png.   
 ```
