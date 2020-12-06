@@ -35,12 +35,12 @@ $ python3 maltorean.py [-h] -M META [-R READ] [-W WRITE]
 ```
 Reads metadata sheet .csv file into pandas dataframe.   
 File must be constructed with columns (without header and index):   
->1) *MALDI-TOF result file name (without .csv),   
->2) Target reference protein name (same in result file),   
->3) Amino acid sequence of reference protein.   
+> 1) *MALDI-TOF result file name (without .csv),   
+> 2) Target reference protein name (same in result file),   
+> 3) Amino acid sequence of reference protein.   
 
->*MALDI-TOF result .csv file is from Unipeptide sheet of .xlsx file.   
->Columns are Protein name, Types of peptide (count) and Sum of peptide spectrum.   
+> *MALDI-TOF result .csv file is from Unipeptide sheet of .xlsx file.   
+> Columns are Protein name, Types of peptide (count) and Sum of peptide spectrum.   
 ```
 
 **OUTPUT FORMAT:**   
